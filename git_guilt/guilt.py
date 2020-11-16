@@ -823,11 +823,11 @@ Please note that git-guilt needs git >= 1.7.2 in order to process binary files.
         'authors\' email addresses instead of their names',
     )
 
-    # TODO Surely there can be sensible defaults for the since and until revs
     parser.add_argument(
         'since',
         metavar='since',
         nargs='?',
+        default='HEAD~1',
         help='The revision starting from which the transfer of blame should '
         'be reported',
     )
@@ -835,6 +835,7 @@ Please note that git-guilt needs git >= 1.7.2 in order to process binary files.
         'until',
         metavar='until',
         nargs='?',
+        default='HEAD',
         help='The revision until which the transfer of blame should be '
         'reported',
     )
